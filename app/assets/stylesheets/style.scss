@@ -2,6 +2,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// Widgets
+@import "custom/jquery.dataTables";
+@import "custom/widgets";
+
 //colors
 $color_mountain_mist_approx: #999;
 $color_tapa_approx: #777;

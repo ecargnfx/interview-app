@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap-sprockets
+//= require jquery.dataTables.min.js
+//= require jquery.slimscroll.min.js
 //= require turbolinks
 //= require_tree .
