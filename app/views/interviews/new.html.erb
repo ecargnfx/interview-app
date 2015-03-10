@@ -20,36 +20,31 @@
 
             <br />
             <!-- Form starts.  -->
-              <form class="form-horizontal" role="form">
-                
-                      
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Name</label>
-                  <div class="col-lg-8">
-                    <input type="text" class="form-control" placeholder="Customer Name">
+              <%= form_for :interview, :html => {:class => 'form-horizontal'}, url: interviews_path do |f| %>
+                  <div class="form-group">                
+                    <div class="col-lg-8">
+                      <%= f.text_field :name, class: 'pull-left form-control', placeholder: 'Customer Name' %>
+                    </div>
                   </div>
-                </div>                      
-                
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Notes</label>
-                  <div class="col-lg-8">
-                    <textarea class="form-control" rows="5" placeholder="Notes"></textarea>
+                 
+                  <div class="form-group">                 
+                    <div class="col-lg-10">
+                      <%= f.text_area :notes, class:'form-control', rows: '7', placeholder: 'Notes' %>
+                    </div>
                   </div>
-                </div>    
 
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Learning</label>
-                  <div class="col-lg-8">
-                    <input type="text" class="form-control" placeholder="Learning">
+                  <div class="form-group">                    
+                    <div class="col-lg-10">
+                      <%= f.text_field :learning, class:'form-control', placeholder: 'Key Learning' %>
+                    </div>
+                  </div>  
+                 
+                  <div class="form-group">
+                    <div class="col-lg-offset-7 col-lg-10">
+                      <%= f.submit class:'btn btn-sm btn-primary' %>
+                    </div>
                   </div>
-                </div>                                                     
-                
-                <div class="form-group">
-                  <div class="col-lg-offset-2 col-lg-6">
-                    <button type="button" class="btn btn-sm btn-primary">Primary</button>
-                  </div>
-                </div>
-              </form>
+                <% end %>
 
           </div>
         </div>
@@ -176,3 +171,7 @@
   </div>
 
 </div>
+
+
+
+

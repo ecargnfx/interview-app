@@ -11,6 +11,6 @@ class ProjectsController < ApplicationController
   def edit
   end
 
-  def delete
+  def destroy
   end
 end
