@@ -605,6 +605,9 @@ img {
     }
   }
 }
+.navbar-fixed-top {
+  z-index: 0;
+}
 .navbar-brand {
   color: $color_tapa_approx;
   font-size: 23px;
@@ -860,6 +863,9 @@ header {
     }
   }
 }
+.content {
+  margin-top: 11px;
+}
 .mainbar {
   position: relative;
   margin-left: 230px;
@@ -874,7 +880,7 @@ header {
     width: 100% !important;
   }
   .page-head {
-    background-color: $color_desert_storm_approx;
+    background-color: $white;
     background: linear-gradient(top, $color_desert_storm_approx, $concrete);
     padding: 8px 20px;
     border-bottom: 1px solid $white;
@@ -1515,6 +1521,9 @@ footer {
   }
 }
 @media(max-width: 480px) {
+  .content {
+  margin-top: 17px;
+  }
   .mainbar {
     .bread-crumb {
       float: none;

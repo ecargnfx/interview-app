@@ -1,7 +1,7 @@
 class InterviewsController < ApplicationController
 
   def index
-    @interview = Interview.all
+    @interviews = Interview.all
   end
 
   def show
@@ -9,6 +9,7 @@ class InterviewsController < ApplicationController
   end
 
   def new
+    @interviews = Interview.all
   end
 
   def edit
@@ -24,7 +25,7 @@ class InterviewsController < ApplicationController
   def update
   end
 
-  def destroy
+  def delete
   end
 
   private

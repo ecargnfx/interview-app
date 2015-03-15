@@ -73,74 +73,26 @@
                   <!-- Widget content -->
                   <div class="padd">
                     
+                    <% @interviews.each do |interview| %>
+                      <ul class="recent">
 
-                    <ul class="recent">
-
-
-                      <li>
-                        <div class="avatar pull-left">
-                          <img src="img/user.jpg" alt=""/>
-                        </div>
-
-                        <div class="recent-content">
-                          <div class="recent-meta">Posted on 25/1/2120 by Ashok</div>
-                          <div>Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
+                        <li>
+                          <div class="recent-content">
+                            <div class ="title"><%= interview.name %></div>
+                            <div><%= interview.learning %></div>
+                            <div class="recent-meta">Interviewed on <%= interview.created_at.strftime("%m/%d/%Y %H:%M:%S") %></div>
+                 
+                            <div class="btn-group">
+                              <button class="btn btn-xs btn-default"><i class="fa fa-pencil"></i> </button>
+                      
+                            </div>
+                            <div class="clearfix"></div>
                           </div>
-
-                          <div class="btn-group">
-                            <button class="btn btn-xs btn-default"><i class="fa fa-check"></i> </button>
-                            <button class="btn btn-xs btn-default"><i class="fa fa-pencil"></i> </button>
-                            <button class="btn btn-xs btn-default"><i class="fa fa-times"></i> </button>
-                          </div>
-                          <div class="clearfix"></div>
-                        </div>
-                      </li>
-
-
-
-                      <li>
-                        <div class="avatar pull-left">
-                          <img src="img/user.jpg" alt=""/>
-                        </div>
-
-                        <div class="recent-content">
-                          <div class="recent-meta">Posted on 25/1/2120 by Ashok</div>
-                          <div>Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
-                          </div>
-
-                          <div class="btn-group">
-                            <button class="btn btn-xs btn-default"><i class="fa fa-check"></i> </button>
-                            <button class="btn btn-xs btn-default"><i class="fa fa-pencil"></i> </button>
-                            <button class="btn btn-xs btn-default"><i class="fa fa-times"></i> </button>
-                          </div>
-                          <div class="clearfix"></div>
-                        </div>
-                      </li>
-
-
-
-                      <li>
-                        <div class="avatar pull-left">
-                          <img src="img/user.jpg" alt=""/>
-                        </div>
-
-                        <div class="recent-content">
-                          <div class="recent-meta">Posted on 25/1/2120 by Ashok</div>
-                          <div>Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
-                          </div>
-
-                          <div class="btn-group">
-                            <button class="btn btn-xs btn-default"><i class="fa fa-check"></i> </button>
-                            <button class="btn btn-xs btn-default"><i class="fa fa-pencil"></i> </button>
-                            <button class="btn btn-xs btn-default"><i class="fa fa-times"></i> </button>
-                          </div>
-                          <div class="clearfix"></div>
-                        </div>
-                      </li>                                        
-
-
-                    </ul>
-
+                        </li>
+                                        
+                      </ul>
+                    <% end %>  
+                    
 
                   </div>
                   <!-- Widget footer -->
