@@ -8,11 +8,12 @@
 </head>
 <body>
   <%= render 'layouts/navigation' %>
-
+  <%= render 'layouts/header' %>
 
   <div class="content">
+    <%= render 'layouts/sidebar' %>
     <div class="mainbar">
-      <%= yield :head %>
+      <%= render 'layouts/page_header' %>
       <div class="matter">
         <%= yield %>
       </div>  
