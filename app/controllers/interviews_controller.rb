@@ -1,25 +1,24 @@
 class InterviewsController < ApplicationController
 
   def index
-    @interviews = Interview.all
+
   end
 
   def show
-    @interview = Interview.find(params[:id])
+
   end
 
   def new
-    @interviews = Interview.all
+
   end
 
   def edit
   end
 
   def create
-    @interview = Interview.new(interview_params)
-   
-    @interview.save
-    redirect_to @interview
+    @project = Project.find(params[:project_id])
+    @interview = @project.interviews.create(interview_params)
+    redirect_to project_path(@project)
   end
 
   def update

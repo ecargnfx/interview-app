@@ -1,16 +1,11 @@
 Rails.application.routes.draw do
-  get 'projects/index'
   root 'projects#index'
 
-  get 'projects/show'
+  resources :projects do
+    resources :interviews
+  end  
 
-  get 'projects/new'
-
-  get 'projects/edit'
-
-  get 'projects/delete'
-
-  resources :interviews
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

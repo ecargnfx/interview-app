@@ -1,2 +1,23 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<% content_for :head do %>
+
+<div class="page-head">
+  <h2 class="pull-left">
+    <%= link_to @project.pname, projects_path %>
+    &middot; <%= @project.objective %></h2>
+
+  <!-- Breadcrumb -->
+  <div class="bread-crumb pull-right">
+    <%= link_to 'Edit', edit_project_path(@project) %>
+    <!-- Divider -->
+    <span class="divider">/</span> 
+    <a href="#" class="bread-current">New Interview</a>
+  </div>
+
+  <div class="clearfix"></div>
+
+</div>
+
+<% end %>
+
+
+

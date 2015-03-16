@@ -5,7 +5,10 @@ class CreateInterviews < ActiveRecord::Migration
       t.text :notes
       t.text :learning
 
+      # this line adds an integer column called `project_id`.
+      t.references :project, index: true
       t.timestamps null: false
     end
   end
 end
+
