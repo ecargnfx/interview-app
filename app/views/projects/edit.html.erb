@@ -1,2 +1,44 @@
-<h1>Projects#edit</h1>
-<p>Find me in app/views/projects/edit.html.erb</p>
+<% content_for :head do %>
+
+<div class="page-head">
+
+<%= form_for :project, url: project_path(@project), method: :patch do |f| %>
+ 
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@project.errors.count, "error") %> prohibited
+        this project from being saved:
+      </h2>
+      <ul>
+        <% @project.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h2 class="pull-left">
+    <%= f.text_field :pname %>
+    &middot; <%= f.text_field :objective %>
+  </h2>
+
+  <!-- Breadcrumb -->
+  <div class="bread-crumb pull-right">
+    <%= f.submit %>
+    <!-- Divider -->
+    <span class="divider">/</span> 
+    <a href="#" class="bread-current">New Interview</a>
+  </div>
+
+<% end %>
+
+<div class="clearfix"></div>
+
+</div>
+
+<% end %>
+
+
+
+

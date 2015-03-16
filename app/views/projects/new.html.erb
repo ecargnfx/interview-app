@@ -1,2 +1,60 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<!-- Form area -->
+<div class="admin-form">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Widget starts -->
+            <div class="widget worange">
+              <!-- Widget head -->
+              <div class="widget-head">
+                New Project 
+              </div>
+
+              <div class="widget-content">
+                <div class="padd">
+
+            <!-- Form starts.  -->
+              <%= form_for :project, :html => {:class => 'form-horizontal'}, url: projects_path do |f| %>
+
+                  <% if @project.errors.any? %>
+                    <div id="error_explanation">
+                      <h2>
+                        <%= pluralize(@project.errors.count, "error") %> prohibited
+                        this project from being saved:
+                      </h2>
+                      <ul>
+                        <% @project.errors.full_messages.each do |msg| %>
+                          <li><%= msg %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  <% end %>
+
+                  <div class="form-group">                
+                    <div class="col-lg-12">
+                      <%= f.text_field :pname, class: 'pull-left form-control', placeholder: 'Project Name' %>
+                    </div>
+                  </div>
+                 
+                  <div class="form-group">                 
+                    <div class="col-lg-12">
+                      <%= f.text_area :objective, class:'form-control', rows: '2', placeholder: 'What is the learning objective of this interview set?' %>
+                    </div>
+                  </div>  
+                 
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <%= f.submit class:'btn btn-sm btn-primary pull-right' %>
+                    </div>
+                  </div>
+                <% end %>
+          
+                </div>
+              </div>
+
+            </div>  
+      </div>
+    </div>
+  </div> 
+</div>

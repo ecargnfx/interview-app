@@ -2,9 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-// Widgets
-@import "custom/jquery.dataTables";
-@import "custom/widgets";
+
 
 //colors
 $color_mountain_mist_approx: #999;
@@ -607,6 +605,9 @@ img {
     }
   }
 }
+.navbar-fixed-top {
+  z-index: 0;
+}
 .navbar-brand {
   color: $color_tapa_approx;
   font-size: 23px;
@@ -862,9 +863,11 @@ header {
     }
   }
 }
+.content {
+  margin-top: 11px;
+}
 .mainbar {
   position: relative;
-  margin-left: 230px;
   margin-right: 0;
   width: auto;
   background: $color_gallery_approx $url_2 repeat;
@@ -876,7 +879,7 @@ header {
     width: 100% !important;
   }
   .page-head {
-    background-color: $color_desert_storm_approx;
+    background-color: $white;
     background: linear-gradient(top, $color_desert_storm_approx, $concrete);
     padding: 8px 20px;
     border-bottom: 1px solid $white;
@@ -1252,31 +1255,23 @@ header {
     padding: 10px 0;
   }
 }
-.today-datas {
+.interview-set {
   list-style-type: none;
   padding: 0;
-  margin: 10px 0;
-  li {
-    display: inline-block;
-    margin-bottom: 5px;
-    margin-right: 10px;
-    padding: 10px 20px;
-    background-color: $color_desert_storm_approx;
-    background: linear-gradient(top, $color_desert_storm_approx, $concrete);
-    background: $color_desert_storm_approx $url_1 repeat;
-    //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    text-shadow: 0 1px $white;
-    border: 1px solid $color_celeste_approx;
-    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: inset 0 0 3px $white;
-    max-width: 100%;
-    text-align: center;
-    .datas-text {
-      font-size: 11px;
-      padding: 7px 0 0;
-      font-weight: normal;
-    }
-  }
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  padding: 20px 20px;
+  background-color: $color_desert_storm_approx;
+  text-shadow: 0 1px $white;
+  border: 1px solid $color_celeste_approx;
+  //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: inset 0 0 3px $white;
+  width: 100%;
+  height: 250px;
+  text-align: center;    
+  font-size: 2em;
+  font-weight: normal;    
+
 }
 .error-page {
   max-width: 500px;
@@ -1517,6 +1512,9 @@ footer {
   }
 }
 @media(max-width: 480px) {
+  .content {
+  margin-top: 17px;
+  }
   .mainbar {
     .bread-crumb {
       float: none;
@@ -1582,7 +1580,7 @@ footer {
     margin: 0;
     border: 0;
   }
-  .today-datas {
+  .interview-set {
     text-align: center;
   }
   .form-inline button {

@@ -11,9 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150316062553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "interviews", force: :cascade do |t|
+    t.string   "name"
+    t.text     "notes"
+    t.text     "learning"
+    t.float    "fit"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "interviews", ["project_id"], name: "index_interviews_on_project_id", using: :btree
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "pname"
+    t.text     "objective"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "interviews", "projects"
 end
