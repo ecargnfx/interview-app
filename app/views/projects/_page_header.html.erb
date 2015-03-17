@@ -1,0 +1,20 @@
+<% content_for :head do %>
+
+  <div class="page-head">
+    <h2 class="pull-left">
+      <%= link_to @project.pname, projects_path %>
+      &middot; <%= @project.objective %></h2>
+
+    <!-- Breadcrumb -->
+    <div class="bread-crumb pull-right">
+      <%= link_to 'Edit', edit_project_path(@project) %>
+      <!-- Divider -->
+      <span class="divider">/</span> 
+      <%= link_to 'New Interview', new_project_interview_path(project_id: @project.id, id: @interview.id) %>
+    </div>
+
+    <div class="clearfix"></div>
+
+  </div>
+
+<% end %>
