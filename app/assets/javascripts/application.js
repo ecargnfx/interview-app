@@ -11,10 +11,12 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
 //= require jquery-ui
-//= require bootstrap-sprockets
-//= require jquery.dataTables.min.js
-//= require jquery.slimscroll.min.js
+//= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
+//= require themes/default.js
+//= require layouts/bottom.js
+//= require layouts/top.js
+//= require layouts/topRight.js
 //= require_tree .

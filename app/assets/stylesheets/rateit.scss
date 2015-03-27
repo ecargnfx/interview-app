@@ -16,7 +16,7 @@
     position: relative;
     display: -moz-inline-box;
     display: inline-block;
-    background: url(image_path('star.gif'));
+    background-image: image-url('star.gif');
     height: 16px;
     outline: none;
 }
